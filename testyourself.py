@@ -18,6 +18,7 @@ indexes = list(range(len(questions)))
 print("----------------------------------------------------")
 
 while (len(indexes)):
+    starttime = time()
     rint = randint(0, len(indexes)-1)
     print("\n")
     print(f"Question {indexes[rint] + 1}: {questions[indexes[rint]]}")
@@ -44,9 +45,11 @@ while (len(indexes)):
         answeredlist.sort()
     else:
         print("You answered the question wrong.")
-    print(f"\nCurrent time of studying: {(time() - starttime)/60:.2f} minutes.")
-    print(f"Current progress: {(len(answeredlist)/len(questions))*100:.2f} %")
-    print(f"Current score: {np.average(scorelist)*100:.2f} %")
+    endtime = time()
+    print(f"\nSpent time on current question: {(endtime-starttime)/60:.2f} minutes.")
+    print(f"Current time of studying: {(time() - starttime)/60:.2f} minutes.")
+    print(f"Current progress: {len(answeredlist)}/{len(questions)} ({(len(answeredlist)/len(questions))*100:.2f} %).")
+    print(f"Current score: {np.average(scorelist)*100:.2f} %.")
     print("\n")
     print("----------------------------------------------------")
 
