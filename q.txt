@@ -1,8 +1,0 @@
-1 What is your name
-2 How old are you
-3 Whats your gender
-4 Whats your surname
-5 How many books have you read last summer
-6 What do you study
-7 Where do you work at
-8 How much do you weight
