@@ -45,6 +45,7 @@ while (len(indexes)):
     else:
         print("You answered the question wrong.")
     print(f"\nCurrent time of studying: {(time() - starttime)/60:.2f} minutes.")
+    print(f"Current progress: {(len(answeredlist)/len(questions))*100:.2f} %")
     print(f"Current score: {np.average(scorelist)*100:.2f} %")
     print("\n")
     print("----------------------------------------------------")
