@@ -15,8 +15,11 @@ file = open(filename + ".txt", "r")
 questions = file.readlines()
 indexes = list(range(len(questions)))
 
+print("----------------------------------------------------")
+
 while (len(indexes)):
     rint = randint(0, len(indexes)-1)
+    print("\n")
     print(f"Question {indexes[rint] + 1}: {questions[indexes[rint]]}")
     anscond = input("Did you know the answer (1/0): ")
     try:
@@ -37,11 +40,16 @@ while (len(indexes)):
         print("You answered the question wrong.")
     print(f"\nCurrent time of studying: {(time() - starttime)/60:.2f} minutes.")
     print(f"Current score: {np.average(scorelist)*100:.2f} %")
+    print("\n")
     print("----------------------------------------------------")
 
 
 #session results
 print("\n\n\n\n\nYour study session results")
 print(f"Overall time: {(time() - starttime)/60:.2f} minutes.")
-print(f"Overall score: {np.average(scorelist)*100:.2f} %\n\n\n\n\n")
+print(f"Overall score: {np.average(scorelist)*100:.2f} %")
+print(f"Questions answered: {len(answeredlist)}\n\n\n\n\n")
 print("----------------------------------------------------")
+
+#waits until enter is pressed
+input("Press enter to exit...")
