@@ -21,7 +21,7 @@ while (len(indexes)):
     rint = randint(0, len(indexes)-1)
     print("\n")
     print(f"Question {indexes[rint] + 1}: {questions[indexes[rint]]}")
-    anscond = input("Did you know the answer (1/0): ")
+    anscond = input("Did you know the answer (1/0)?: ")
     try:
         if anscond == "answered":
             print(answeredlist)
@@ -30,7 +30,13 @@ while (len(indexes)):
     except:
         anscondint = 0
 
+    if anscondint:
+        anscondint = 1
+    else:
+        anscondint = 0
+
     scorelist = np.append(scorelist, anscondint)
+
     if anscondint:
         print("You answered the question correctly.")
         answered = indexes.pop(rint)
