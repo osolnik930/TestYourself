@@ -47,9 +47,11 @@ while (len(indexes)):
         print("You answered the question wrong.")
     endtime = time()
     timespent = endtime-starttime
+    unit = "minutes"
     if (timespent >= 60):
         timespent = timespent/60
-    print(f"\nSpent time on current question: {timespent:.2f} minutes.")
+        unit = "seconds"
+    print(f"\nSpent time on current question: {timespent:.2f} {unit}.")
     print(f"Current time of studying: {(time() - starttimeall)/60:.2f} minutes.")
     print(f"Current progress: {len(answeredlist)}/{len(questions)} ({(len(answeredlist)/len(questions))*100:.2f} %).")
     print(f"Current score: {np.average(scorelist)*100:.2f} %.")
