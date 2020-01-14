@@ -6,7 +6,7 @@ import numpy as np
 
 #definitions
 answeredlist = []
-starttime = time()
+starttimeall = time()
 scorelist = np.array(())
 
 #core
@@ -47,7 +47,7 @@ while (len(indexes)):
         print("You answered the question wrong.")
     endtime = time()
     print(f"\nSpent time on current question: {(endtime-starttime)/60:.2f} minutes.")
-    print(f"Current time of studying: {(time() - starttime)/60:.2f} minutes.")
+    print(f"Current time of studying: {(time() - starttimeall)/60:.2f} minutes.")
     print(f"Current progress: {len(answeredlist)}/{len(questions)} ({(len(answeredlist)/len(questions))*100:.2f} %).")
     print(f"Current score: {np.average(scorelist)*100:.2f} %.")
     print("\n")
@@ -56,7 +56,7 @@ while (len(indexes)):
 
 #session results
 print("\n\n\n\n\nYour study session results")
-print(f"Overall time: {(time() - starttime)/60:.2f} minutes.")
+print(f"Overall time: {(time() - starttimeall)/60:.2f} minutes.")
 print(f"Overall score: {np.average(scorelist)*100:.2f} %")
 print(f"Questions answered: {len(answeredlist)}\n\n\n\n\n")
 print("----------------------------------------------------")
