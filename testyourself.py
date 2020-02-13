@@ -26,6 +26,7 @@ while (len(indexes)):
     try:
         if anscond == "answered":
             print(answeredlist)
+            anscondint = 0
         elif anscond == "":
             anscondint = True
         else:
