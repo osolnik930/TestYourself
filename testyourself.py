@@ -22,10 +22,12 @@ while (len(indexes)):
     rint = randint(0, len(indexes)-1)
     print("\n")
     print(f"Question {indexes[rint] + 1}: {questions[indexes[rint]]}")
-    anscond = input("Did you know the answer (1/0)?: ")
+    anscond = input("Did you know the answer (1/0/answered)?: ")
     try:
         if anscond == "answered":
             print(answeredlist)
+        else if anscond == "":
+            anscondint = True
         else:
             anscondint = int(anscond)
     except:
