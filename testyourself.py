@@ -11,7 +11,7 @@ scorelist = np.array(())
 
 #core
 filename = input("File name (without a .txt extension): ")
-file = open(filename + ".txt", "r")
+file = open(filename + ".txt", "r", encoding="utf-8")
 questions = file.readlines()
 indexes = list(range(len(questions)))
 
